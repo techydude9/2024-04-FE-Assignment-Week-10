@@ -13,7 +13,7 @@ let id = 0;
 document.getElementById('addMusic').addEventListener('click', () => {
     let table = document.getElementById('mTable1');
     let row = table.insertRow(1);
-    row.setAttribute('rowId', `item-${id}`);
+    row.setAttribute('id', `row-${id}`);
     row.insertCell(0).innerHTML = id + 1;
     row.insertCell(1).innerHTML = document.getElementById('genreId').value;
     row.insertCell(2).innerHTML = document.getElementById('bandId').value;
@@ -29,10 +29,10 @@ function createRemoveBtn(id) {
     let rmBtn = document.createElement('button');
     rmBtn.className = 'btn btn-primary';
     rmBtn.id = id;
-    rmBtn.innerHTML = 'Remove';
+    rmBtn.innerHTML = 'Yes';
     rmBtn.onclick = () => {
-        console.log(`Removing row with id: item-${id}`);
-        let elementToRemove = document.getElementById(`item-${id}`);
+        console.log(`Removing row with id: row-${id}`);
+        let elementToRemove = document.getElementById(`row-${id}`);
         console.log(elementToRemove);
         elementToRemove.parentNode.removeChild(elementToRemove);
     };
