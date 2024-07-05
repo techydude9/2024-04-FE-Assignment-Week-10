@@ -6,9 +6,9 @@
     <title>Bob Ruzga Coding Assignment wk 10</title>
     <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./codeAssignWk10.css">
+    <link rel="stylesheet" href="/codeAssignWk10.css">
 </head>
-<body>
+<body class="container">
     <div id="mocha">
         <p><a href="./index.html">Index</a></p>
       </div>
@@ -17,9 +17,8 @@
   
       <script src="./node_modules/mocha/mocha.js"></script>
       <script src="./node_modules/chai/chai.js"></script>
-      <script src="./node_modules/jquery/dist/jquery.js"></script>
+      <!-- <script src="./node_modules/jquery/dist/jquery.js"></script>  -->
       <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-      <script src="codeAssignWk10.js"></script>
       <script>
         mocha.setup('bdd')
       </script>
@@ -29,15 +28,72 @@
       </script>
     
     <!--- Coding Assignment Header  --->
-    <div class="container-md flex-md-wrap">
+    <div class="container-md flex-md-wrap text-center">
       <h1 class="bg-dark text-info border border-success rounded-pill p-2">Bob Ruzga's Week 10 Coding Assignment</h1>
     </div>
+    <br>
 
     <!--- Coding Assignment Main  --->
-    <div> 
+    <div class="container text-center">  <!--- h2 showing My Collection head-->
+      <h2 class=" border border-success text-bg-secondary text-white-50">My Music Collection</h2>
+    </div>  
 
-    </div>
+  <!-- Main Form for adding/removing albums from my music collection -->
+  <!--  form id is mForm1 -->
+    <div id="mForm1" class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="genreId">Genre</label>
+              <input type="text" class="form-control" id="genreId" placeholder="Enter a Genre">
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="bandId">Band</label>
+              <input type="text" class="form-control" id="bandId" placeholder="Enter the Band">
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="albumId">Album</label>
+              <input type="text" class="form-control" id="albumId" placeholder="Enter an Album">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div>
+          <button id="addMusic" class="btn btn-primary form-control">Add to Collection</button>
+        </div>
+      </div>
+    </div>  <!-- End of Form div-->
 
-    
-</body>
+  <!--  Enhancing UI -->
+    <br>
+    <hr>
+    <br>
+
+
+  <!-- main Table to hold my music collection -->
+  <!-- table id is mTable1 -->
+    <table id="mTable1" class="table table-primary table-bordered border-primary table-striped table-hover">
+   <!---     <thead id="mTable1Head">   -->
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" >Genre</th>
+            <th scope="col">Band</th>
+            <th scope="col">Album</th>
+            <th scope="col">Remove?</th>
+          </tr>
+     <!--   </thead>
+        <tbody id="mTable1Bod">
+        </tbody>   -->
+    </table> 
+      <!--- End of Table --> 
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="codeAssignWk10.js"></script>
+
+</body> 
 </html>
