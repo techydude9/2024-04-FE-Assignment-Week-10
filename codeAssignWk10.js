@@ -33,7 +33,7 @@ function createRemoveBtn(id) {
     rmBtn.onclick = () => {
         console.log(`Removing row with id: row-${id}`);
         let elementToRemove = document.getElementById(`row-${id}`);
-        console.log(elementToRemove);
+        /* console.log(elementToRemove); */
         elementToRemove.parentNode.removeChild(elementToRemove);
     };
     return rmBtn;
